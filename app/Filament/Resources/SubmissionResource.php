@@ -75,7 +75,7 @@ class SubmissionResource extends Resource
     {
         // Hardcode the number of submissions for now.
         // TODO: Implement a way to get the number of pending submissions.
-        return 10;
+        return '10';
     }
 
     public static function getNavigationBadgeColor(): ?string

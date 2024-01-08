@@ -13,7 +13,8 @@ class DiceBearAvatarsProvider implements Contracts\AvatarProvider
     {
         $name = str(Filament::getNameForDefaultAvatar($record))
             ->trim()
-            ->explode(' ')[0];
+            ->explode(' ')
+            ->first(default: '');
 
         return 'https://api.dicebear.com/7.x/thumbs/svg?seed=' . urlencode($name);
     }
